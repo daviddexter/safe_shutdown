@@ -1,0 +1,14 @@
+[package]
+name = "safe-shutdown"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dirs = "4.0"
+job_scheduler = "1.2.1"
+notify-rust = "4.5.5"
+serde = "1.0.130"
+system_shutdown = "3.0.0"
+toml = "0.5.8"
