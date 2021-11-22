@@ -17,7 +17,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/home/<your-user-name>/.cargo/bin/
-ExecStart=/home/<your-user-name>/.cargo/bin/safe_shutdown
+ExecStart=/home/<your-user-name>/.cargo/bin/safe-shutdown
 Restart=on-failure
 [Install]
 WantedBy=default.target
@@ -32,7 +32,7 @@ Consult `cargo install` documentation for details
 If the installation path is not `/home/<your-user-name>/.cargo`, you will have to amend the service file to the path where the binary is located
 
 ```sh
-cargo install --git https://github.com/daviddexter/safe_shutdown.git --tag v0.0.1 safe_shutdown
+cargo install --git https://github.com/daviddexter/safe_shutdown.git --tag v0.0.1
 ```
 
 ### Controlling the service
@@ -47,3 +47,4 @@ systemctl --user stop safe_shutdown.service
 # Restarting/reloading
 systemctl --user daemon-reload  # Run if safe_shutdown.service file has changed
 systemctl --user restart safe_shutdown.service
+```
